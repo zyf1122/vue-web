@@ -1,9 +1,8 @@
 <template>
-  <div class="home">
-    <Header message='生活一家'></Header>
-    <Banner></Banner>
-    <Main></Main>
-    <Advertise></Advertise>
+  <div class="mine">        
+    <Top></Top>
+    <List></List>
+    <!-- <Content></Content> -->
     <Footer></Footer>
     
   </div>
@@ -12,10 +11,11 @@
 <script>
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
-import Main from '@/components/Main'
+import Content from '@/components/Content'
 import Advertise from '@/components/Advertise'
 import Footer from '@/components/Footer'
-
+import Top from '@/components/Top'
+import List from '@/components/List'
 
 export default {
   data () {
@@ -28,9 +28,11 @@ export default {
   components:{
       'Header':Header,
       'Banner':Banner,
-      'Main':Main,
+      'Content':Content,
       'Advertise':Advertise,
-      'Footer':Footer
+      'Footer':Footer,
+      Top,
+      List
       
   }
 }

@@ -1,7 +1,9 @@
 <template>
   <div class="main">
     <div class="left">
+      <a >
       <img v-bind:src="msg" alt="">
+      </a>
       </div>
     <div class="right">
     <a v-for="img in img">
@@ -30,8 +32,13 @@ export default {
 
 
 <style scoped>
-.main::after {
-  /* height: 100%; */
+.main{  
+  margin: 5px 10px 0 ;
+}
+.main > div{
+  display: inline-block;
+}
+.main::after {  
   height: 0;
   content:'';
   display: block;
@@ -41,21 +48,25 @@ export default {
 }
 .main .left {
   width: 32%;
-  /* text-align:left; */
+  
   float: left;
 }
 .main .left img {
   width: 100%;
-  padding-left: 10px;
 }
+
 .main .right {
   width: 67%;
-  /* text-align:right; */
+  
   float: right;
 }
 .main .right img {
   width: 48%;
-  padding-right: 5px;
+ 
+}
+
+.main .right a:nth-child(2n) img {
+  margin-left: 5px;
 }
 .main .right a:nth-child(3) img {
   margin-top: 5px;
@@ -65,12 +76,9 @@ export default {
 }
 ul {
   list-style-type: none;
-  padding: 0;
+ 
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+
 a {
   color: #42b983;
 }

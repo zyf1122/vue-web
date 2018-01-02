@@ -1,13 +1,9 @@
 <template>
   <div class="header">      
-    <div class="left" v-show="$route.path == '/'? true : false">
-      <select>
-        <option v-for="msg in msg">{{msg}}</option>        
-      </select>
-    </div>
+    
     <div >{{message}}</div>
-    <div class="right iconfont icon-sousuokuangsousuo" v-show="$route.path == '/'? true : false"></div>
-    <div class="right1" v-show="$route.path == '/cart'? true : false"><a >编辑</a> </div>
+    <div class="right" v-show="$route.path == '/cart'? true : false"><a >编辑</a></div>
+    
   </div>
 </template>
 
@@ -28,7 +24,7 @@ export default {
   background: rgb(228, 188, 14);
   position: relative;
 }
-.header div:nth-child(2){
+.header div:nth-child(1){
   font-size:20px;
   /* font-weight: bold; */
 }
@@ -37,28 +33,12 @@ export default {
   line-height: 40px;
   color:white;
 }
-.header .left{
-  position:absolute;
-  left: 10px;
-  top:0;
-}
-.header .left select{
-  background: rgb(228, 188, 14);
-  border:none;
-  outline: none;
-  color: white;
-}
+
 .header .right{
    position:absolute;
    top:0;
    right:10px;
-   font-size:1.5em; 
-}
-.header .right1{
-   position:absolute;
-   top:0;
-   right:10px;
-   /* font-size:1.5em;  */
+   /* font-size:20px; */
 }
 ul {
   list-style-type: none;

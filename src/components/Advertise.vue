@@ -30,9 +30,10 @@ export default {
 </script>
 
 <style scoped>
-/* .advertise{ */
-  /* margin-top:10px; */
-/* } */
+.advertise{
+  margin-bottom:60px;
+  /* background: #f2f2f2;  */
+}
 .top{
   height: 40px;
   line-height: 40px;
@@ -46,14 +47,15 @@ export default {
     top: 20px;
     width: 95%;
     height: 1px;
-    background-color: #e0e0e0;
+    background: #dbdbdb;
     margin: 0 10px;
     /* text-align: center; */
 }
 .top span{
   color: #808080;
   background: #fff;
-  padding: 0 10px;
+  padding: 0 10px;  
+  display:inline-block;
 }
 .content ul{
   border: 1px rgb(228, 217, 217) solid;

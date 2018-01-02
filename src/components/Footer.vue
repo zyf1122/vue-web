@@ -1,57 +1,99 @@
 <template>
-  <div class="footer">
-    <ul>
-      <li v-for="msg in msg "><a href="" v-bind:class="msg.active"><i v-bind:class="msg.cls"></i><br>{{msg.name}}</a></li>
-    </ul> 
-  </div>
+	<div class="tabar" >
+		<div class="tab">
+			<div class="tab-item">
+				<router-link to="/" exact>
+					<div class="tab-icon"><span class="iconfont icon-home"></span></div>
+					<div class="tab-text">首页</div>
+				</router-link>
+			</div>
+			<div class="tab-item">
+				<router-link to="/hun" exact>
+					<div class="tab-icon"><span class="iconfont icon-liwu"></span></div>
+					<div class="tab-text">会员杂锦</div>
+				</router-link>
+			</div>
+			<div class="tab-item">
+				<router-link to="/category" exact>
+					<div class="tab-icon"><span class="iconfont icon-leimupinleifenleileibie"></span></div>
+					<div class="tab-text">分类</div>
+				</router-link>
+			</div>
+			<div class="tab-item">
+				<router-link to="/cart" exact>
+					<div class="tab-icon"><span class="iconfont icon-cart-copy"></span></div>
+					<div class="tab-text">购物车</div>
+				</router-link>
+			</div>
+      <div class="tab-item">
+				<router-link to="/mine" exact>
+					<div class="tab-icon"><span class="iconfont icon-home1"></span></div>
+					<div class="tab-text">我的</div>
+				</router-link>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      msg: [
-        {"cls":'iconfont icon-home',"name":'首页',"active":'active'},
-        {"cls":'iconfont icon-huiyuan',"name":'会员杂锦',"active":''},
-        {"cls":'iconfont icon-leimupinleifenleileibie',"name":'分类',"active":''},
-        {"cls":'iconfont icon-cart-copy',"name":'购物车',"active":''},
-        {"cls":'iconfont icon-home1',"name":'我的',"active":''}
-      ]
-    };
+    return {};
   }
 };
 </script>
-
-<style scoped>
-.footer ul{
-  width: 100%;
-  height: 60px; 
-  border-top: 1px  #e0e0e0 solid;
+<style scoped >
+/* .tabar{
+  margin-bottom: 60px;
+} */
+.tabar .tab {
   position: fixed;
-  bottom: -10px;
-  background:#fff;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  line-height: 30px;
+  background: #fff;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
-.footer ul li{
-  width:20%;
-  float: left;  
-  /* margin-top:5px; */
+.tab:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-top: 1px solid rgba(7, 17, 27, 0.1);
+  content: "";
 }
-.footer ul li i{
-  font-size: 25px;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
+.tab-item {
+  flex: 1;
+  text-align: center;
 }
 
-.active{
-  color: #f29004;
-}
-a{
-  color:#c4bdb6
-}
-a:hover{
+a {
+  display: block;
+  font-size: 14px;
+  color: rgb(175, 175, 171);
   text-decoration: none;
-  color: #f29004;
+}
+.router-link-active {
+  color: #c3e62c;
+  
+}
+
+.tab-icon {
+  width: 50px;
+  height: 25px;
+  margin: 0 auto;
+}
+.tab-icon span {
+  font-size: 25px;
+  display:inline-block;
+}
+.tab-text {
+  height: 25px;
+  line-height: 25px;
 }
 </style>
+

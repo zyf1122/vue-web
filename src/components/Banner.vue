@@ -27,10 +27,11 @@ export default {
           }
         },
         swiperSlides: [
-          {"url":require("../assets/1.png"),"name":'第一张'},
-          {"url":require("../assets/2.png"),"name":'第二张'},
-          {"url":require("../assets/1.png"),"name":'第三张'},
-          {"url":require("../assets/2.png"),"name":'第四张'}
+          {"url":require("../assets/1.jpg"),"name":'第一张'},
+          {"url":require("../assets/2.jpg"),"name":'第二张'},
+          {"url":require("../assets/3.jpg"),"name":'第三张'},
+          {"url":require("../assets/4.jpg"),"name":'第四张'},
+          {"url":require("../assets/5.jpg"),"name":'第五张'}
         ]
       }    
   }

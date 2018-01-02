@@ -1,9 +1,8 @@
 <template>
-  <div class="home">
-    <Header message='生活一家'></Header>
-    <Banner></Banner>
-    <Main></Main>
-    <Advertise></Advertise>
+  <div class="cart">        
+    <Header message='购物车'></Header>
+    <!-- <Banner></Banner> -->
+    <!-- <Content></Content> -->
     <Footer></Footer>
     
   </div>
@@ -12,7 +11,7 @@
 <script>
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
-import Main from '@/components/Main'
+import Content from '@/components/Content'
 import Advertise from '@/components/Advertise'
 import Footer from '@/components/Footer'
 
@@ -28,7 +27,7 @@ export default {
   components:{
       'Header':Header,
       'Banner':Banner,
-      'Main':Main,
+      'Content':Content,
       'Advertise':Advertise,
       'Footer':Footer
       
