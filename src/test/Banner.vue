@@ -22,8 +22,13 @@ export default {
   data () {
     return {
       swiperOption: {
-        autoplay: true,
+        loop: true,
         speed: 1000,
+        autoplay: true,
+        autoplay: {
+          disableOnInteraction: false
+        },
+        
           pagination: {
             el: '.swiper-pagination'
           }

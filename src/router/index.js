@@ -8,6 +8,7 @@ import Cart from "@/pages/Cart"
 import Mine from "@/pages/Mine"
 import T from "@/test/T"
 import jq from "@/test/jq"
+import Banner from "@/test/Banner"
 
 Vue.use(Router)
 
@@ -41,6 +42,10 @@ export default new Router({
     {
       path:'/jq',
       component:jq
+    },
+    {
+      path:'/b',
+      component:Banner
     }
   ]
 })
